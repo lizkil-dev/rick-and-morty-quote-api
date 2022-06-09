@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My App</title>
+  <link href= "../public/assets/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <section class="column">
+  <div class="head">
+  <h1>Rick & Morty Quote Time</h1>
+  <form action="/quotes" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="quote" name="quote">
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>Quotes</h2>
+  <ul class="quotes">
+    <% for (let i = 0; i < quotes.length; i++) {%>
+      <li class="quote">
+        <span><%= quotes[i].name %></span>:
+        <span><%= quotes[i].quote %></span>
+      </li>
+    <% } %>
+  </ul>
+  </div>
+  
+  <div class="flex">
+  <div>
+    <h2>Oh Jeez</h2>
+     <p>
+      Replace a Quote with a Rick Quote.
+     </p>
+     <button id="update-button">Hit for Rick</button>
+  </div>
+  
+  <div>
+    <h2>Get rid of Rick</h2>
+    <p>
+      Delete a Rick Quote.
+    </p>
+    <button id="delete-button">Delete Rick</button>
+  </div>
+  <div id="message"></div>
+  </div>
+</section>
+  <script src="../public/main.js"></script>
+</body>
+</html>

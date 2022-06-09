@@ -23,7 +23,7 @@ const MongoClient = require('mongodb').MongoClient;
 // })
 //   .then(
 //     () => 
-MongoClient.connect(`mongodb+srv://${process.env.user}:${process.env.pw}@cluster0.5xevu.mongodb.net/?retryWrites=true&w=majority`, { useUnifiedTopology: true })
+MongoClient.connect(`mongodb+srv://${process.env.mongoDBUser}:${process.env.mongoDBPw}@cluster0.5xevu.mongodb.net/?retryWrites=true&w=majority`, { useUnifiedTopology: true })
   //)
   .then(client => {
     console.log('Connected to Database');

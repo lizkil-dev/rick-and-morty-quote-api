@@ -1,9 +1,14 @@
+
+
+require('dotenv').config();
 const express = require('express');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
 const connectionString = 'mongodb+srv://lizkil:{L30nN03l}@cluster0.5xevu.mongodb.net/?retryWrites=true&w=majority'
 
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/lizkil-rick-and-morty-quotes');
 
 MongoClient.connect(connectionString, { useUnifiedTopology: true })
   .then(client => {
@@ -69,8 +74,9 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
     })
 
     //server
-    app.listen(3000, function() {
+    app.listen(process.env.PORT || 3000, function() {
     console.log('listening on 3000')
     })       
+    module.exports = app;
 })
 .catch(error => console.error(error))

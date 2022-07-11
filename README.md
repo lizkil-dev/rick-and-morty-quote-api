@@ -6,8 +6,8 @@ My first CRUD-application where you can read, post, update and delete Rick-and-M
 ### Link to project:
 https://lizkil-rick-and-morty-quotes.herokuapp.com/
 
-How It's Made:
+### How It's Made:
 Tech used: HTML, CSS, JavaScript, Node, Express.Js, MongoDB
 
-Installation
+### Installation:
 npm install

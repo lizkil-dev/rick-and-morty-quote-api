@@ -1,6 +1,6 @@
 # rick-and-morty-quote-api
 
-My first CRUD-application, where the user can read, post, update and delete Rick-and-Morty quotes. The app is based on the tutorial by Zell Liew 
+My first CRUD-application where the user can read, post, update and delete Rick-and-Morty quotes. The app is based on the tutorial by Zell Liew 
 "Building a Simple CRUD app with Node, Express, and MongoDB" (https://zellwk.com/blog/crud-express-mongodb/)
 
 ### Link to project:
